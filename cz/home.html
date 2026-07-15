@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dolomiti — Letní výlet 2026</title>
+    <title>Domů — Letní výlet 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
@@ -112,6 +112,19 @@
         .card--forest h2 { color: var(--forest); }
         .card--terracotta { border-left: 4px solid var(--terracotta); }
         .card p { font-size: 1.05rem; color: var(--forest); max-width: 720px; }
+        .card ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem 2rem;
+            margin-top: 0.5rem;
+        }
+        .card ul li {
+            padding-left: 1.5rem; position: relative; font-size: 0.98rem;
+        }
+        .card ul li::before {
+            content: "✦"; position: absolute; left: 0; color: var(--terracotta);
+        }
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -150,6 +163,7 @@
         }
         @media (max-width: 800px) {
             .photo-grid { grid-template-columns: repeat(2, 1fr); }
+            .card ul { grid-template-columns: 1fr; }
             .page-header h1 { font-size: 2rem; }
             section { padding: 2.5rem 1.2rem; }
             nav { padding: 0 1rem; }
@@ -165,42 +179,45 @@
 <body>
 
 <nav>
-    <a href="home-cs.html" class="logo"><span>&#127940;</span> letní výlet</a>
+    <a href="home.html" class="logo"><span>&#127940;</span> letní výlet</a>
     <div class="nav-links">
-        <a href="home-cs.html">Domů</a>
-        <a href="dolomiti-cs.html" class="active">Dolomiti</a>
-        <a href="levanto-cs.html">Levanto</a>
+        <a href="home.html" class="active">Domů</a>
+        <a href="dolomiti.html">Dolomiti</a>
+        <a href="levanto.html">Levanto</a>
     </div>
 </nav>
 
-<a href="dolomiti.html" class="translate-btn" title="English">&#127468;&#127463;</a>
+<a href="../en/home.html" class="translate-btn" title="English">&#127468;&#127463;</a>
 
 <div class="page-header">
-    <div class="header-icons">&#9760;&#65039; &#129406;</div>
-    <h1>Dolomity</h1>
-    <div class="subtitle">&#127956; bledé štíty, horská záře a cyklistický závod, který jsme nečekali</div>
+    <div class="header-icons">&#9728;&#65039; &#128663; &#127754;</div>
+    <h1>Léto 2026: Výlet do Dolomit a Levanta</h1>
+    <div class="subtitle">&#9998; Praha &rarr; Dolomity &rarr; Levanto &rarr; zase domů</div>
 </div>
 
 <section>
     <div class="container">
-        <div class="card card--forest">
-            <h2><span class="icon">&#9968;&#65039;</span> O Dolomitech</h2>
-            <p>
-                Dolomity jsou pohoří v severovýchodní Itálii, součást Jižních vápencových Alp. Nejvyšším vrcholem je Marmolada s výškou 3 343 metrů. Oblast je známá svými dramatickými bledými útesy, jedinečnými skalními útvary a fenoménem "alpenglow", kdy hory při západu slunce zbarví do růžova.
-            </p>
+        <div class="card card--sand">
+            <h2><span class="icon">&#127758;</span> Zajímavosti o zemích, kterými jsme projížděli</h2>
+            <ul>
+                <li><strong>Česká republika:</strong> Má přes 2 000 hradů a zámků — jedna z nejvyšších hustot na světě.</li>
+                <li><strong>Rakousko:</strong> Více než 60 % území pokrývají Alpy.</li>
+                <li><strong>Itálie:</strong> Má nejvíce památek UNESCO ze všech zemí světa.</li>
+                <li><strong>Německo:</strong> Jeho dálniční síť je jedna z nejstarších a nejrychlejších v Evropě.</li>
+            </ul>
         </div>
 
-        <div class="photo-grid photo-grid--tilt">
-            <div class="photo"><img src="photo/dolomiti/dolomiti1.jpg" alt="Vrchol Dolomit" loading="lazy"></div>
-            <div class="photo"><img src="photo/dolomiti/dolomiti2.jpg" alt="Horské údolí" loading="lazy"></div>
-            <div class="photo"><img src="photo/dolomiti/dolomiti3.jpg" alt="Alpské jezero" loading="lazy"></div>
-            <div class="photo"><img src="photo/dolomiti/dolomiti4.jpg" alt="Západ slunce v Dolomitech" loading="lazy"></div>
+        <div class="photo-grid">
+            <div class="photo"><img src="../photo/home/home1.jpg" alt="Výhled na cestu" loading="lazy"></div>
+            <div class="photo"><img src="../photo/home/home2.jpg" alt="Horská silnice" loading="lazy"></div>
+            <div class="photo"><img src="../photo/home/home3.jpg" alt="Pobřeží" loading="lazy"></div>
+            <div class="photo"><img src="../photo/home/home4.jpg" alt="Alpská scenérie" loading="lazy"></div>
         </div>
 
-        <div class="card card--terracotta">
-            <h2><span class="icon">&#128692;</span> Incident s cyklistickým závodem</h2>
+        <div class="card card--sky">
+            <h2><span class="icon">&#128668;</span> Rodinný výlet</h2>
             <p>
-                Naše poklidná jízda horami se nečekaně změnila v dobrodružství, když jsme uvízli za obrovským cyklistickým závodem. Kolem nás se proháněly desítky cyklistů, zatímco my jsme seděli v autě uvězněni na úzké silnici bez šance pohnout se. Děti začaly fandit, jako bychom byli na Tour de France, zatímco my jsme přemýšleli, jestli z hor vůbec unikneme před západem slunce. Nakonec závod projel a my pokračovali v cestě — mírně zpožděni, ale s skvělým příběhem.
+                Naložili jsme auto v Praze spoustou svačin a absolutně bez tušení, kolika tunely projedeme. Dolomity nás přivítaly mohutnými štíty, Levanto nás uvítalo teplými vlnami a cestou zpátky jsme kličkovali Rakouskem a Německem jako ostřílení cestovatelé. Na konci vypadalo naše auto, jako by přežilo malou přírodní katastrofu — ale ty vzpomínky stály za každý drobek, každou objížďku a každou otázku "Už jsme tam?"
             </p>
         </div>
     </div>
@@ -209,9 +226,9 @@
 <footer>
     <div class="footer-icons">&#9968;&#65039; &#127754; &#9728;&#65039; &#128663;</div>
     <div class="footer-links">
-        <a href="home-cs.html">Domů</a>
-        <a href="dolomiti-cs.html">Dolomiti</a>
-        <a href="levanto-cs.html">Levanto</a>
+        <a href="home.html">Domů</a>
+        <a href="dolomiti.html">Dolomiti</a>
+        <a href="levanto.html">Levanto</a>
     </div>
     <div class="copyright">Letní výlet 2026 — Rodinná dobrodružství</div>
 </footer>
