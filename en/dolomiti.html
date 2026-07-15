@@ -30,24 +30,22 @@
         .handwriting { font-family: 'Caveat', cursive; font-weight: 400; }
 
         .translate-btn {
-            position: fixed;
-            top: 12px;
-            right: 12px;
-            z-index: 200;
-            width: 44px;
-            height: 44px;
+            width: 34px;
+            height: 34px;
             border-radius: 50%;
             background: var(--white);
             box-shadow: var(--shadow);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.15rem;
             text-decoration: none;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
             border: 2px solid var(--sand);
             line-height: 1;
+            flex-shrink: 0;
+            margin-left: 10px;
         }
         .translate-btn:hover {
             transform: scale(1.1);
@@ -70,7 +68,7 @@
             font-family: 'Caveat', cursive;
         }
         nav .logo span { font-size: 1.6rem; }
-        nav .nav-links { display: flex; gap: 0.5rem; }
+        nav .nav-links { display: flex; gap: 0.5rem; margin-right: 4px; }
         nav .nav-links a {
             text-decoration: none; color: var(--forest);
             font-weight: 500; font-size: 0.95rem;
@@ -171,9 +169,8 @@
         <a href="dolomiti.html" class="active">Dolomiti</a>
         <a href="levanto.html">Levanto</a>
     </div>
+    <a href="../cz/dolomiti.html" class="translate-btn" title="Česky">&#127466;&#127439;</a>
 </nav>
-
-<a href="../cz/dolomiti.html" class="translate-btn" title="Česky">&#127466;&#127439;</a>
 
 <div class="page-header">
     <div class="header-icons">&#9760;&#65039; &#129406;</div>
