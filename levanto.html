@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levanto — Summer 2026 Road Trip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --seafoam: #7FB7A4;
+            --sand: #E8DCC2;
+            --terracotta: #C97B63;
+            --sky: #A9C9E8;
+            --forest: #2F4A3A;
+            --white: #fafaf7;
+            --shadow: 0 4px 20px rgba(47, 74, 58, 0.08);
+            --radius: 16px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--forest);
+            background: var(--white);
+            line-height: 1.7;
+        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 700; }
+        .handwriting { font-family: 'Caveat', cursive; font-weight: 400; }
+        nav {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(250, 250, 247, 0.92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--sand);
+            padding: 0 2rem;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 60px;
+        }
+        nav .logo {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 1.3rem; font-weight: 600;
+            color: var(--terracotta); text-decoration: none;
+            font-family: 'Caveat', cursive;
+        }
+        nav .logo span { font-size: 1.6rem; }
+        nav .nav-links { display: flex; gap: 0.5rem; }
+        nav .nav-links a {
+            text-decoration: none; color: var(--forest);
+            font-weight: 500; font-size: 0.95rem;
+            padding: 0.5rem 1rem; border-radius: 8px;
+            transition: all 0.2s;
+        }
+        nav .nav-links a:hover,
+        nav .nav-links a.active { background: var(--sand); color: var(--terracotta); }
+        section { padding: 4rem 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .page-header {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            background: linear-gradient(180deg, var(--sky) 0%, transparent 100%);
+        }
+        .page-header h1 {
+            font-size: 2.6rem; color: var(--terracotta); margin-bottom: 0.3rem;
+        }
+        .page-header .subtitle {
+            font-family: 'Caveat', cursive; font-size: 1.3rem; color: var(--seafoam);
+        }
+        .page-header .header-icons {
+            font-size: 2rem; margin-bottom: 0.8rem; letter-spacing: 6px;
+        }
+        .card {
+            background: var(--white); border-radius: var(--radius);
+            box-shadow: var(--shadow); padding: 2rem 2.5rem;
+            margin-bottom: 2.5rem; transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); }
+        .card h2 {
+            font-size: 1.7rem; color: var(--terracotta);
+            margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;
+        }
+        .card h2 .icon { font-size: 1.6rem; }
+        .card--sand { background: var(--sand); }
+        .card--sky { border-left: 4px solid var(--sky); }
+        .card--forest { border-left: 4px solid var(--seafoam); }
+        .card--forest h2 { color: var(--forest); }
+        .card--terracotta { border-left: 4px solid var(--terracotta); }
+        .card p { font-size: 1.05rem; color: var(--forest); max-width: 720px; }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 2.5rem 0;
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+        .photo-grid .photo {
+            aspect-ratio: 4 / 3; overflow: hidden;
+            border-radius: 10px; box-shadow: var(--shadow); cursor: pointer;
+        }
+        .photo-grid .photo img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.4s ease, box-shadow 0.3s ease; display: block;
+        }
+        .photo-grid .photo:hover img { transform: scale(1.08); }
+        footer {
+            background: var(--sand); text-align: center;
+            padding: 3rem 2rem; margin-top: 2rem;
+        }
+        footer .footer-icons {
+            font-size: 1.6rem; letter-spacing: 12px; margin-bottom: 1rem;
+        }
+        footer .footer-links {
+            display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1rem;
+        }
+        footer .footer-links a {
+            text-decoration: none; color: var(--forest);
+            font-weight: 500; font-size: 0.95rem; transition: color 0.2s;
+        }
+        footer .footer-links a:hover { color: var(--terracotta); }
+        footer .copyright {
+            font-size: 0.85rem; color: var(--forest); opacity: 0.7;
+        }
+        @media (max-width: 800px) {
+            .photo-grid { grid-template-columns: repeat(2, 1fr); }
+            .page-header h1 { font-size: 2rem; }
+            section { padding: 2.5rem 1.2rem; }
+            nav { padding: 0 1rem; }
+            nav .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
+            .card { padding: 1.5rem; }
+        }
+        @media (max-width: 500px) {
+            .photo-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .page-header h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="home.html" class="logo"><span>&#127940;</span> summer road trip</a>
+    <div class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="dolomiti.html">Dolomiti</a>
+        <a href="levanto.html" class="active">Levanto</a>
+    </div>
+</nav>
+
+<div class="page-header">
+    <div class="header-icons">&#127754; &#127940;</div>
+    <h1>Levanto — Sea, Sun &amp; Adventure</h1>
+    <div class="subtitle">&#127959;&#65039; sandy beaches, surf waves &amp; a Medusa mission</div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="card card--sky">
+            <h2><span class="icon">&#127754;</span> About Levanto</h2>
+            <p>
+                Levanto is a charming seaside town on the Ligurian coast of Italy, known for its sandy beaches, surf-friendly waves, and access to the famous Cinque Terre trails. It blends relaxed coastal living with adventurous outdoor activities, making it a favorite spot for families and hikers alike.
+            </p>
+        </div>
+
+        <div class="photo-grid">
+            <div class="photo"><img src="photo/levanto/levanto1.jpg" alt="Levanto beach" loading="lazy"></div>
+            <div class="photo"><img src="photo/levanto/levanto2.jpg" alt="Ligurian coast" loading="lazy"></div>
+            <div class="photo"><img src="photo/levanto/levanto3.jpg" alt="Boat trip" loading="lazy"></div>
+            <div class="photo"><img src="photo/levanto/levanto4.jpg" alt="Cinque Terre view" loading="lazy"></div>
+        </div>
+
+        <div class="card card--terracotta">
+            <h2><span class="icon">&#128029;</span> Medusa Encounter</h2>
+            <p>
+                On our last day, we decided to take a boat trip — a perfect plan until we discovered the water was full of poisonous medusas. Suddenly swimming became a strategic mission: dodge left, dodge right, don't touch anything that wiggles. The kids treated it like an underwater obstacle course, while the adults tried to look brave. We made it back to the boat without a single sting, feeling like victorious sea explorers.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-icons">&#9968;&#65039; &#127754; &#9728;&#65039; &#128663;</div>
+    <div class="footer-links">
+        <a href="home.html">Home</a>
+        <a href="dolomiti.html">Dolomiti</a>
+        <a href="levanto.html">Levanto</a>
+    </div>
+    <div class="copyright">Summer Trip 2026 — Family Adventures</div>
+</footer>
+
+</body>
+</html>
